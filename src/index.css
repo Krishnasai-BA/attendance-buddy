@@ -92,3 +92,36 @@
     font-family: 'Inter', sans-serif;
   }
 }
+
+@keyframes swing {
+  0%, 100% { transform: rotate(-15deg); }
+  50% { transform: rotate(15deg); }
+}
+
+@keyframes sway-roots {
+  0%, 100% { transform: translateX(0) skewX(0deg); }
+  25% { transform: translateX(5px) skewX(1deg); }
+  75% { transform: translateX(-5px) skewX(-1deg); }
+}
+
+@keyframes float-up {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-swing {
+  animation: swing 3s ease-in-out infinite;
+  transform-origin: top center;
+}
+
+.animate-sway {
+  animation: sway-roots 6s ease-in-out infinite;
+}
+
+.animate-float-up {
+  animation: float-up 0.6s ease-out forwards;
+}
+
+.violet-results {
+  background: linear-gradient(135deg, hsl(270 60% 30%), hsl(280 70% 20%), hsl(260 50% 25%));
+}
